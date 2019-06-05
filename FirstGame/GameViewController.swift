@@ -14,7 +14,17 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        //set the game to use the default screen size
+        let scene = GameScene(size:view.frame.size)
+        let skView = view as! SKView
         
+        //configure the game to show debug information about game
+        skView.showsFPS = true
+        skView.showsNodeCount = true
+       
+        // show the game
+        skView.presentScene(scene)
         
     }
 
